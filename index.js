@@ -1,8 +1,12 @@
+/**
+ * Base Eslint Config
+ */
 module.exports = {
-  extends: require.resolve('eslint-config-airbnb'),
+  extends: require.resolve('eslint-config-airbnb-base'),
   parser: 'babel-eslint',
   env: {
     browser: true,
+    es6: true,
     node: true,
     jest: true,
   },
@@ -16,9 +20,7 @@ module.exports = {
     indent: ['error', 2, {
       SwitchCase: 1,
     }],
-    'react/jsx-indent': ['error', 2],
-    'react/jsx-indent-props': ['error', 2],
-    'max-len': ['warn', 120, 4, {
+    'max-len': ['warn', 100, 2, {
       ignoreUrls: true,
       ignoreComments: false,
       ignoreRegExpLiterals: true,
@@ -54,8 +56,6 @@ module.exports = {
       },
     }],
     'import/prefer-default-export': 'warn',
-    'import/no-unresolved': 'off',
-    'import/no-extraneous-dependencies': 'off',
     'import/extensions': 'off',
     // Always wrap arrow functions in parens. No x => x
     'arrow-parens': ['error', 'always'],
@@ -63,40 +63,22 @@ module.exports = {
       allowShortCircuit: true,
       allowTernary: true,
     }],
+    'no-unused-vars': ['error', {
+      // Allow "unused" underscore.
+      // const isOld = (_name, age) => age > 1;
+      'argsIgnorePattern': '^_',
+    }],
     'no-plusplus': ['error', {
       allowForLoopAfterthoughts: true,
     }],
     // It is useful to add comments into invocation occasionally.
     'function-paren-newline': 'off',
-    // Use a custom logger for logs
+    // Should use a common logger for logs
+    // This could even be a wrapper around `console.log`
     'no-console': 'error',
-    // Inline requires are actually useful for not wasting a
-    // variable name on a `import [image] from [imageDir]`;
+    // Inline requires can be useful in node for
+    // dynamically loading a module.
     'global-require': 'off',
-    // This is up the user, and code reviews
-    // Single lookups shouldn't require an intermediate variable
-    'react/destructuring-assignment': 'off',
-    'react/no-array-index-key': 'warn',
-    'react/require-default-props': 'off',
-    // You can use jsx outside of a file.jsx file
-    'react/jsx-filename-extension': 'off',
-    // We need componentDidMount setState for Server Side Rendering
-    'react/no-did-mount-set-state': 'off',
-    // This is fine for simple text.
-    // Use prettier to strict format your code
-    'react/jsx-one-expression-per-line': 'off',
-    // The JSX A11y Docs explain that Static elements such as <div> and <span> should not have mouse/keyboard event listeners.
-    // Instead use something more semantic, such as a button or a link.
-    // However, there are often times when you truly do need to interact with the layout and things like inputs and buttons are not suitable.
-    // (e.g. - drag and drop elements in an admin panel, loosing focus on a modal or popover, etc.)
-    'jsx-a11y/no-static-element-interactions': 'off',
-    // Allowing special link prop "to" not to throw error. (https://github.com/ReactTraining/react-router/issues/5598)
-    // TODO: Remove once https://github.com/airbnb/javascript/pull/1648 has been released
-    'jsx-a11y/anchor-is-valid': ['error', {
-      components: ['Link'],
-      specialLink: ['to'],
-      aspects: ['noHref', 'invalidHref', 'preferButton'],
-    }],
     // Use prettier if you want something this strict
     'lines-between-class-members': 'off',
     // Running eslint --fix with this on removes
@@ -111,5 +93,26 @@ module.exports = {
     }],
     // Should be using something like prettier for strict formatting
     'operator-linebreak': 'off',
-  }
+    // Shadow variables can be confusing but shouldn't be errors
+    'no-shadow': 'warn',
+    // Turn off Airbnb restricted syntax
+    // We don't have the same restrictions.
+    'no-restricted-syntax': 'off',
+    // Use what makes sense.
+    // Such as: Camel case for vars, snake-case for constants
+    'camelcase': 'off',
+    // This is fine an can lead to clearer code
+    // Should be case by case in a code review.
+    'no-param-reassign': 'off',
+    // Throwing errors is preferred but not required
+    'no-throw-literal': 'off',
+    'prefer-promise-reject-errors': 'off',
+    // Choice to use `const` if var isn't reassigned.
+    'prefer-const': ['error', {
+      // Destructuring is excluded from this since you only get one keyword.
+      destructuring: 'all',
+    }],
+    // Use Typescript to catch return types.
+    'consistent-return': 'off',
+  },
 };

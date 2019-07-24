@@ -1,10 +1,14 @@
 {
   "name": "@zelz/eslint-config",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Zelzen Eslint Config",
-  "main": "lib/index.js",
+  "main": "index.js",
   "files": [
-    "lib"
+    "index.js",
+    "prettier.js",
+    "react.js",
+    "typescript.js",
+    "prettier.config.js"
   ],
   "repository": "git@github.com:zelzen/eslint-config.git",
   "author": "Gabe M <gabe@zelzen.io>",
@@ -13,8 +17,11 @@
     "access": "public"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "babel-eslint": "^10.0.1",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -22,11 +29,10 @@
     "eslint-plugin-react": "^7.12.4"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "prettier": "^1.16.4"
+    "eslint": "^5.3.0",
+    "prettier": "^1.18.2"
   },
   "peerDependencies": {
-    "eslint": ">=5",
-    "prettier": "^1.16.4"
+    "eslint": ">=5"
   }
 }

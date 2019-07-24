@@ -1,3 +1,8 @@
 {
-  "extends": "./lib/base.js"
+  "extends": [
+    "./index.js"
+  ],
+  "rules": {
+    "quote-props": "off"
+  }
 }
