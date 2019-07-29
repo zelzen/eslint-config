@@ -1,5 +1,9 @@
 module.exports = {
-  extends: require.resolve('eslint-config-airbnb'),
+  extends: [
+    require.resolve('eslint-config-airbnb'),
+    // Last in order to override airbnb rules
+    require.resolve('./index.js'),
+  ],
   rules: {
     // Standard Indentation of 2 spaces
     'react/jsx-indent': ['error', 2],

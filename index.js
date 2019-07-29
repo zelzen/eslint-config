@@ -55,6 +55,8 @@ module.exports = {
         object: false,
       },
     }],
+    // This rule is wrong most of the time
+    'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'warn',
     'import/extensions': 'off',
     // Always wrap arrow functions in parens. No x => x
@@ -62,6 +64,8 @@ module.exports = {
     'no-unused-expressions': ['error', {
       allowShortCircuit: true,
       allowTernary: true,
+      // Primarily to support emotions "injectGlobal" template
+      allowTaggedTemplates: true,
     }],
     'no-unused-vars': ['error', {
       // Allow "unused" underscore.

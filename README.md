@@ -5,7 +5,7 @@ Zelzen Eslint Config
 ## Install
 
 ```sh
-yarn install -D @zelz/eslint-config
+yarn add -D @zelz/eslint-config
 ```
 
 ## Usage
