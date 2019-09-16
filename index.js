@@ -75,7 +75,7 @@ module.exports = {
     'function-paren-newline': 'off',
     // Should use a common logger for logs
     // This could even be a wrapper around `console.log`
-    'no-console': 'error',
+    'no-console': 'warn',
     // Inline requires can be useful in node for
     // dynamically loading a module.
     'global-require': 'off',
