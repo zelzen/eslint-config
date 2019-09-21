@@ -4,6 +4,9 @@ module.exports = {
     // Override Airbnb's config with our default
     require.resolve('./index.js'),
   ],
+  plugins: [
+    'react-hooks',
+  ],
   rules: {
     // Standard Indentation of 2 spaces
     'react/jsx-indent': ['error', 2],
@@ -47,5 +50,8 @@ module.exports = {
     // Doesn't really matter where you initialize state.
     // If you are trying the catch state errors, use Typescript.
     'react/state-in-constructor': 'off',
+    // Enable rules of hooks
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
 };
