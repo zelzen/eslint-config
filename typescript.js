@@ -2,6 +2,10 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
   ],
+  extends: [
+    // Disables rules handled by Typescript
+    'plugin:@typescript-eslint/eslint-recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
@@ -19,6 +23,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', {
       // Ignore variables that start with underscores
       varsIgnorePattern: '^_',
+      argsIgnorePattern: '^_',
     }],
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/array-type': ['error', 'generic'],

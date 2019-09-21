@@ -66,6 +66,7 @@ module.exports = {
     'no-unused-vars': ['error', {
       // Allow "unused" underscore.
       // const isOld = (_name, age) => age > 1;
+      'varsIgnorePattern': '^_',
       'argsIgnorePattern': '^_',
     }],
     'no-plusplus': ['error', {
@@ -114,5 +115,6 @@ module.exports = {
     }],
     // Use Typescript to catch return types.
     'consistent-return': 'off',
+    'max-classes-per-file': 'off',
   },
 };
