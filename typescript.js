@@ -26,11 +26,13 @@ module.exports = {
       argsIgnorePattern: '^_',
     }],
     '@typescript-eslint/adjacent-overload-signatures': 'error',
-    '@typescript-eslint/array-type': ['error', 'generic'],
+    '@typescript-eslint/array-type': ['error', {
+      default: 'generic',
+    }],
     '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/no-array-constructor': 'error',
     '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/no-misused-new': 'error',
-    '@typescript-eslint/no-triple-slash-reference': 'error',
+    '@typescript-eslint/triple-slash-reference': 'error',
   },
 };
