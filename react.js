@@ -4,6 +4,9 @@ module.exports = {
     // Last in order to override airbnb rules
     require.resolve('./index.js'),
   ],
+  plugins: [
+    'react-hooks',
+  ],
   rules: {
     // Standard Indentation of 2 spaces
     'react/jsx-indent': ['error', 2],
@@ -36,5 +39,19 @@ module.exports = {
       specialLink: ['to'],
       aspects: ['noHref', 'invalidHref', 'preferButton'],
     }],
+    // Allow prop spreading
+    'react/jsx-props-no-spreading': 'off',
+    // Either syntax is fine
+    'react/jsx-fragments': 'off',
+    // No need to force placement
+    'react/static-property-placement': 'off',
+    // Use Prettier
+    'react/jsx-curly-newline': 'off',
+    // Doesn't really matter where you initialize state.
+    // If you are trying the catch state errors, use Typescript.
+    'react/state-in-constructor': 'off',
+    // Enable rules of hooks
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
 };

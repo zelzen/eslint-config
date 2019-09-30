@@ -70,6 +70,7 @@ module.exports = {
     'no-unused-vars': ['error', {
       // Allow "unused" underscore.
       // const isOld = (_name, age) => age > 1;
+      'varsIgnorePattern': '^_',
       'argsIgnorePattern': '^_',
     }],
     'no-plusplus': ['error', {
@@ -79,7 +80,7 @@ module.exports = {
     'function-paren-newline': 'off',
     // Should use a common logger for logs
     // This could even be a wrapper around `console.log`
-    'no-console': 'error',
+    'no-console': 'warn',
     // Inline requires can be useful in node for
     // dynamically loading a module.
     'global-require': 'off',
@@ -118,5 +119,6 @@ module.exports = {
     }],
     // Use Typescript to catch return types.
     'consistent-return': 'off',
+    'max-classes-per-file': 'off',
   },
 };
