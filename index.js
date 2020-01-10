@@ -121,4 +121,10 @@ module.exports = {
     'consistent-return': 'off',
     'max-classes-per-file': 'off',
   },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      ...require('./typescript'),
+    },
+  ],
 };

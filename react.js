@@ -4,6 +4,17 @@ module.exports = {
     // Last in order to override airbnb rules
     require.resolve('./index.js'),
   ],
+  parserOptions: {
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   plugins: [
     'react-hooks',
   ],
