@@ -1,6 +1,6 @@
 {
   "name": "@zelz/eslint-config",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Zelzen Eslint Config",
   "main": "index.js",
   "files": [

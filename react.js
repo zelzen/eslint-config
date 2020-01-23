@@ -1,8 +1,10 @@
 module.exports = {
   extends: [
-    require.resolve('eslint-config-airbnb'),
-    // Last in order to override airbnb rules
-    require.resolve('./index.js'),
+    // Just extend Airbnb React rules because by default it
+    // extends their default config, which would
+    // override _our_ overrides.
+    require.resolve('eslint-config-airbnb/rules/react'),
+    require.resolve('eslint-config-airbnb/rules/react-a11y'),
   ],
   parserOptions: {
     ecmaVersion: 2018,
