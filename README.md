@@ -17,7 +17,8 @@ eslint config
 ```js
 {
   "extends": [
-    "@zelz/eslint-config", // Base file w/ Typescript Support (if used). This should be included at the top.
+    "@zelz/eslint-config", // Base file this should be included at the top.
+    "@zelz/eslint-config/typescript", // Add if you're using typescript.
     "@zelz/eslint-config/react", // Add if you're using react.
     "@zelz/eslint-config/prettier", // Add if you want prettier to format your code (recommended)
   ],
