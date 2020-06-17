@@ -22,7 +22,7 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {
       // Ignore variables that start with underscores
-      varsIgnorePattern: '^(_|React)',
+      varsIgnorePattern: '^_',
       argsIgnorePattern: '^_',
     }],
     '@typescript-eslint/adjacent-overload-signatures': 'error',
