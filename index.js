@@ -96,6 +96,8 @@ module.exports = {
       ImportDeclaration: { consistent: true },
       ExportDeclaration: { consistent: true },
     }],
+    // Use Prettier for brace formatting
+    'brace-style': 'off',
     // Should be using something like prettier for strict formatting
     'operator-linebreak': 'off',
     // Shadow variables can be confusing but shouldn't be errors
