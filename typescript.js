@@ -8,6 +8,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    sourceType: 'module',
     ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true,
@@ -34,5 +35,10 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/triple-slash-reference': 'error',
+    '@typescript-eslint/ban-ts-comment': 'error',
+    '@typescript-eslint/no-extra-non-null-assertion': 'error',
+    '@typescript-eslint/no-namespace': 'error',
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
+    '@typescript-eslint/prefer-as-const': 'error',
   },
 };
