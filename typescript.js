@@ -35,7 +35,6 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/triple-slash-reference': 'error',
-    '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/no-extra-non-null-assertion': 'error',
     '@typescript-eslint/no-namespace': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
