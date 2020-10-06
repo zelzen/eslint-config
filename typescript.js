@@ -48,10 +48,6 @@ module.exports = {
     }],
     // Use Typescript's no-shadow to avoid false positives,
     'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': ['error', {
-      // Type shadow is fine
-      ignoreTypeValueShadow: true,
-      ignoreFunctionTypeParameterNameValueShadow: true,
-    }],
+    '@typescript-eslint/no-shadow': ['warn'],
   },
 };
