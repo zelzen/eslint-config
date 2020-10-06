@@ -39,12 +39,19 @@ module.exports = {
     '@typescript-eslint/no-namespace': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/prefer-as-const': 'error',
-    // Use Typescripts no-use-before-define instead
+    // Use Typescript's no-use-before-define to avoid false positives
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', {
       // Types can appear anywhere
       typedefs: false,
       ignoreTypeReferences: true,
+    }],
+    // Use Typescript's no-shadow to avoid false positives,
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error', {
+      // Type shadow is fine
+      ignoreTypeValueShadow: true,
+      ignoreFunctionTypeParameterNameValueShadow: true,
     }],
   },
 };
