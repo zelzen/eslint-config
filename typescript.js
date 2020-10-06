@@ -39,5 +39,12 @@ module.exports = {
     '@typescript-eslint/no-namespace': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/prefer-as-const': 'error',
+    // Use Typescripts no-use-before-define instead
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error', {
+      // Types can appear anywhere
+      typedefs: false,
+      ignoreTypeReferences: true,
+    }],
   },
 };
